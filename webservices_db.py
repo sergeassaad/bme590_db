@@ -1,4 +1,4 @@
-from database_setup.py import Patient
+from database_setup import Patient
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
