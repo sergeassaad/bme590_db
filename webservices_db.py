@@ -15,7 +15,7 @@ def average_bmi(age):
 
 @app.route("/new_patient", methods = ['POST'])
 def new_patient():
-    if type(request.json['name']) is not str or type(request.json['age']) is not int or type(request.json['bmi']) is not float:
+    if type(request.json['name']) is not str or type(request.json['age']) is not float or type(request.json['bmi']) is not float:
         request.status_code = 406  #validation error status code
     u = Patient(request.json['name'], bmi=request.json['bmi'], age=request.json['age'])
     u.save()
